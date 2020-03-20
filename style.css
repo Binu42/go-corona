@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  display: none;
+}
+
+.leaflet-container h3 {
+  font-size: 18px;
+}
+
+.my-icon {
+  font-family: CentraNo1-Bold, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  z-index: 1;
+  background: #fb0000;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(74, 74, 74, 0.2);
+  color: #131313;
+  font-size: 12px;
+  letter-spacing: 0.29px;
+  line-height: 10px;
+  padding: 10px 14px;
+  position: absolute;
+  text-align: left;
+  left: -2px;
+  transition: opacity 0.25s, color 0.1s, background-color 0.25s;
+  display: flex;
+  flex-direction: row;
+}
+
+.my-icon:hover {
+  background-color: #f01919c5;
+  cursor: pointer;
+  color: #fff;
+  border-color: #f01919c5;
+}
+
+.my-icon:hover::after {
+  border-color: #f01919c5;
+}
+
+.my-icon::after {
+  content: ' ';
+  top: 100%;
+  left: calc(50% - 4px);
+  position: absolute;
+  border: 4px solid transparent;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-color: #f01919c5;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-shadow: -3px 2px 4px 0 rgba(74, 74, 74, 0.2);
+  transition: border-color 0.25s;
+  border-radius: 1px;
+}
+
+.my-icon .price {
+  margin-left: 8px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 13px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+}
+
+.slick-slide {
+  text-align: center;
+  color: #419be0;
+  background: white;
+}
+
+#popup {
+  width: 250px;
+}
+
+table {
+  width: 100%;
+  border: 1px dashed #333333;
+}
+
+thead {
+  background-color: #0213ff;
+  color: white;
+}
+
+th,
+td {
+  height: 50px;
+  vertical-align: center;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-size: 16px;
+}
+
+td {
+  font-size: 16px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
