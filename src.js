@@ -28,7 +28,7 @@ axios.get('https://corona.lmao.ninja/jhucsse')
     var markers = new L.MarkerClusterGroup();
     const cases = properties.data;
     for (var i = 1; i < cases.length; i++) {
-      var marker = L.marker(new L.LatLng(cases[i].coordinates.lattitude, cases[i].coordinates.longitude), {
+      var marker = L.marker(new L.LatLng(cases[i].coordinates.latitude, cases[i].coordinates.longitude), {
         icon: L.mapbox.marker.icon({ 'marker-symbol': 'city', 'marker-color': '333' }),
         title: cases[i].address_line_1
       });
@@ -39,7 +39,7 @@ axios.get('https://corona.lmao.ninja/jhucsse')
       }));
 
       marker.bindPopup(`<div id="popup" data-toggle="modal" data-target=".bd-example-modal-lg">
-            <h3 style="text-align: center">${cases[i].country}</h3>
+            <h3 style="text-align: center; font-size: '22px'">${cases[i].country}</h3> <h5 style="text-align: center; font-size: '18px'">${cases[i].province}</h5>
             <h5>Last updatedAt:- ${moment(cases[i].updatedAt).format('MMMM Do YYYY, h:mm:ss a')}</h4 >
       <table>
         <thead>
