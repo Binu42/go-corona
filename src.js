@@ -39,7 +39,9 @@ axios.get('https://corona.lmao.ninja/jhucsse')
       }));
 
       marker.bindPopup(`<div id="popup" data-toggle="modal" data-target=".bd-example-modal-lg">
-            <h3 style="text-align: center; font-size: '22px'">${cases[i].country}</h3> <h5 style="text-align: center; font-size: '18px'">${cases[i].province}</h5>
+            <h3 style="text-align: center; font-size: '22px'">${cases[i].country}</h3> 
+            
+            <h5 style="text-align: center; font-size: '18px'">${cases[i].province}</h5>
             <h5>Last updatedAt:- ${moment(cases[i].updatedAt).format('MMMM Do YYYY, h:mm:ss a')}</h4 >
       <table>
         <thead>
@@ -62,6 +64,12 @@ axios.get('https://corona.lmao.ninja/jhucsse')
         </tbody>
       </table>
           </div > `);
+      marker.on('mouseover', function (e) {
+        e.target.openPopup();
+      });
+      marker.on('mouseout', function (e) {
+        e.target.closePopup();
+      });
       markers.addLayer(marker);
     }
 
