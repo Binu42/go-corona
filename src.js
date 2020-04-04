@@ -7,7 +7,7 @@ axios.get('https://corona.lmao.ninja/all')
   })
 
 
-axios.get('https://corona.lmao.ninja/jhucsse')
+axios.get('https://corona.lmao.ninja/v2/jhucsse')
   .then(properties => {
     // console.log(properties.data)
     document.querySelector('.preloader').style.display = 'none';
